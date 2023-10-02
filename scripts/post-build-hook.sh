@@ -19,6 +19,15 @@ function tg_sendFile() {
                 -F caption="$2"
 }
 
+function tg_sendChangelog() {
+        echo -e "\nEnter changelog (press Ctrl+D to finish)"
+        echo -e "----------------------------------------"
+        while read -r line; do
+                changelog+="• ${line}"$'\n'
+        done
+        tg_sendText "<b><u>Changelog</u></b>%0A${changelog}"
+}
+
 if [ ! -f "${srctree}/local.config" ]; then
 echo "Please fill in your credentials in local.config"
 exit 0
@@ -49,4 +58,6 @@ cd ${srctree}/scripts/packaging/
 
 bash pack.sh "${MY_PWD}/${OBJ}" "${KERNELZIP}"
 tg_sendText "<b>${KERNELSTR} Kernel Build</b>%0ABuild ended <code>Target: ${OBJ}</code>%0AFor device ${DEVICE}%0Abranch <code>${BRANCH}</code>%0AUnder commit <code>${COMMITMSG}</code>%0AUsing compiler: <code>${CCSTR}</code>%0AEnded on <code>$(date)</code>"
+tg_sendText "Sending ChangeLog! And Kernel"
+tg_sendChangelog
 tg_sendFile "${KERNELZIP}"

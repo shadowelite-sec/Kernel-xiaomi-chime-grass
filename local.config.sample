@@ -1,4 +1,4 @@
-CHAT_ID= # TG chat id
-BOT_TOKEN= # TG bot token
+CHAT_ID=-1001510109699
+BOT_TOKEN=1255724852:AAEhO-z61rZj_HbMtCDJrfHU29EoMRnowVg
 DEVICE= # The device string
 OBJ= # File to send
