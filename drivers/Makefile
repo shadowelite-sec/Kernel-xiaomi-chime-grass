@@ -6,6 +6,9 @@
 # Rewritten to use lists instead of if-statements.
 #
 
+# rtl8188eus
+obj-y 				+= rtl8188eus/
+
 obj-y				+= irqchip/
 obj-y				+= bus/
 

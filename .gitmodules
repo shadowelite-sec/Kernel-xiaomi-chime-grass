@@ -1,6 +1,10 @@
 [submodule "scripts/packaging"]
 	path = scripts/packaging
-	url = https://github.com/hac4us06/kernel_packaging
+	url = https://github.com/shadowelite-sec/kernel_packaging.git
 [submodule "KernelSU"]
 	path = KernelSU
 	url = https://github.com/tiann/KernelSU
+[submodule "drivers/rtl8188eus"]
+	path = drivers/rtl8188eus
+	url = https://github.com/aircrack-ng/rtl8188eus
+	branch = v5.3.9

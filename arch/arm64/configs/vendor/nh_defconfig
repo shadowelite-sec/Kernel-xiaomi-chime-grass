@@ -1424,6 +1424,7 @@ CONFIG_HAVE_EBPF_JIT=y
 #
 # Device Drivers
 #
+CONFIG_RTL8188EU=y
 CONFIG_ARM_AMBA=y
 
 #
@@ -4464,7 +4465,6 @@ CONFIG_STAGING=y
 # CONFIG_RTLLIB is not set
 # CONFIG_RTL8723BS is not set
 # CONFIG_R8712U is not set
-# CONFIG_R8188EU is not set
 # CONFIG_VT6656 is not set
 
 #
@@ -5347,8 +5347,7 @@ CONFIG_ANDROID_BINDER_DEVICES="binder,hwbinder,vndbinder"
 #
 # KernelSU
 #
-CONFIG_KSU=y
-# CONFIG_KSU_DEBUG is not set
+# CONFIG_KSU is not set
 # CONFIG_LIBNVDIMM is not set
 # CONFIG_DAX is not set
 CONFIG_NVMEM=y
